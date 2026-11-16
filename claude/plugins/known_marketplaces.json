@@ -1,0 +1,50 @@
+{
+  "claude-plugins-official": {
+    "source": {
+      "source": "github",
+      "repo": "anthropics/claude-plugins-official"
+    },
+    "installLocation": "{{HOME_JSON}}\\.claude\\plugins\\marketplaces\\claude-plugins-official",
+    "lastUpdated": "2026-11-16T09:11:39.177Z"
+  },
+  "planning-with-files": {
+    "source": {
+      "source": "github",
+      "repo": "OthmanAdi/planning-with-files"
+    },
+    "installLocation": "{{HOME_JSON}}\\.claude\\plugins\\marketplaces\\planning-with-files",
+    "lastUpdated": "2026-11-16T03:07:41.772Z"
+  },
+  "chisle": {
+    "source": {
+      "source": "github",
+      "repo": "JayPokale/Chisle"
+    },
+    "installLocation": "{{HOME_JSON}}\\.claude\\plugins\\marketplaces\\chisle",
+    "lastUpdated": "2026-11-16T03:10:49.323Z"
+  },
+  "cc-safety-net-dev": {
+    "source": {
+      "source": "github",
+      "repo": "kenryu42/cc-safety-net"
+    },
+    "installLocation": "{{HOME_JSON}}\\.claude\\plugins\\marketplaces\\cc-safety-net-dev",
+    "lastUpdated": "2026-11-16T03:20:35.246Z"
+  },
+  "codex-attachment-manager": {
+    "source": {
+      "source": "github",
+      "repo": "chipfighter/framekeeper"
+    },
+    "installLocation": "{{HOME_JSON}}\\.claude\\plugins\\marketplaces\\codex-attachment-manager",
+    "lastUpdated": "2026-11-16T03:22:59.293Z"
+  },
+  "aiguide": {
+    "source": {
+      "source": "github",
+      "repo": "timescale/pg-aiguide"
+    },
+    "installLocation": "{{HOME_JSON}}\\.claude\\plugins\\marketplaces\\aiguide",
+    "lastUpdated": "2026-11-16T03:25:00.054Z"
+  }
+}
