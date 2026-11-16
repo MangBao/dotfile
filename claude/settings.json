@@ -1,0 +1,79 @@
+{
+  "env": {
+    "CLAUDE_CODE_GIT_BASH_PATH": "C:\\Program Files\\Git\\bin\\bash.exe"
+  },
+  "permissions": {
+    "defaultMode": "auto",
+    "deny": [
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"C:\\Program Files\\Git\\bin\\bash.exe\" -c \"grep -qE '(git reset --hard|rm -rf|DROP TABLE)' && { echo 'Blocked by safety hook: destructive command' >&2; exit 2; } || exit 0\""
+          }
+        ]
+      }
+    ],
+    "SessionStart": []
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash -c 'f=$(ls -d \"$HOME\"/.claude/plugins/cache/chisle/chisle/*/hooks/chisle-statusline.sh 2>/dev/null | sort -V | tail -1); [ -n \"$f\" ] && exec bash \"$f\"'"
+  },
+  "enabledPlugins": {
+    "session-report@claude-plugins-official": true,
+    "planning-with-files@planning-with-files": true,
+    "chisle@chisle": true,
+    "security-guidance@claude-plugins-official": true,
+    "cc-safety-net@cc-safety-net-dev": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "chrome-devtools-mcp@claude-plugins-official": false,
+    "codex-attachment-manager@codex-attachment-manager": false,
+    "expo@claude-plugins-official": false,
+    "context7@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "pg@aiguide": false,
+    "supabase@claude-plugins-official": false
+  },
+  "extraKnownMarketplaces": {
+    "planning-with-files": {
+      "source": {
+        "source": "github",
+        "repo": "OthmanAdi/planning-with-files"
+      }
+    },
+    "chisle": {
+      "source": {
+        "source": "github",
+        "repo": "JayPokale/Chisle"
+      }
+    },
+    "cc-safety-net-dev": {
+      "source": {
+        "source": "github",
+        "repo": "kenryu42/cc-safety-net"
+      }
+    },
+    "codex-attachment-manager": {
+      "source": {
+        "source": "github",
+        "repo": "chipfighter/framekeeper"
+      }
+    },
+    "aiguide": {
+      "source": {
+        "source": "github",
+        "repo": "timescale/pg-aiguide"
+      }
+    }
+  },
+  "theme": "dark",
+  "model": "opus"
+}
